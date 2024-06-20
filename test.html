@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="kataloq">
+        <button class="prev kataloqButton" onclick="scrollCarousel(-1)">&#10094;</button>
+        <div class="kataloqCarusel">
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Sana Özel">
+                <p>Sana Özel</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Sen De Al!">
+                <p>Sen De Al!</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Gazze'ye Yardım">
+                <p>Gazze'ye Yardım</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Deprem Destek">
+                <p>Deprem Destek</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Kurumsal">
+                <p>Kurumsal</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Kredi Kartı">
+                <p>Kredi Kartı</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Krediler">
+                <p>Krediler</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Apple">
+                <p>Apple</p>s
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Philips">
+                <p>Philips</p>
+            </div>
+            <div class="carousel-items">
+                <img src="sekil 12.jpg" alt="Pull & Bear">
+                <p>Pull & Bear</p>
+            </div>
+        </div>
+        <button class="next kataloqButton" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let Index = 0;
+
+        function scrollCarousel(direction) {
+            const carousel = document.querySelector('.kataloqCarusel');
+            const items = document.querySelectorAll('.carousel-items');
+            const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight) * 2; // Including margins
+            const visibleItemsCount = Math.floor(document.querySelector('.kataloq').offsetWidth / itemWidth);
+            const maxIndex = items.length - visibleItemsCount;
+
+            Index += direction;
+
+            if (Index < 0) {
+                Index = 0;
+            } else if (Index > maxIndex) {
+                Index = maxIndex;
+            }
+
+            carousel.style.transform = `translateX(-${Index * itemWidth}px)`;
+        }
+    </script>
+</body>
+</html>
