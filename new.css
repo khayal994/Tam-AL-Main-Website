@@ -23,8 +23,8 @@ body {
 }
 
 .carousel-items img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   display: block;
   margin: 0 auto;
   border-radius: 50%;
@@ -49,6 +49,10 @@ body {
   right: 0;
 }
 @media (max-width: 768px) {
+  .carousel-items img{
+    width: 60px;
+    height: 60px;
+  }
   .prev, .next {
       display: none;
   }
@@ -629,7 +633,10 @@ body {
   .block-3 { grid-area: 2 / 8 / 3 / 13; }
   
   @media screen and (max-width:1140px) {
+    .social-links{
+      margin-left: 18%;
 
+    }
     .banner-blocks {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
