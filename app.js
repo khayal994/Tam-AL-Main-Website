@@ -89,6 +89,7 @@ document.getElementById('close-icon').addEventListener('click', function() {
 
 // Corusel
 let Index = 0;
+let startX, currentX, lastX, isDraggings = false, velocity = 0, animationFrame;
 
 function scrollCarousel(direction) {
     const carousel = document.querySelector('.kataloqCarusel');
@@ -105,5 +106,104 @@ function scrollCarousel(direction) {
         Index = maxIndex;
     }
 
+    carousel.style.transition = 'transform 0.5s ease-in-out';
     carousel.style.transform = `translateX(-${Index * itemWidth}px)`;
 }
+
+function handleTouchStart(e) {
+    startX = e.touches[0].clientX;
+    isDraggings = true;
+    lastX = startX;
+    cancelAnimationFrame(animationFrame);
+    const carousel = document.querySelector('.kataloqCarusel');
+    carousel.style.transition = 'none';
+}
+
+function handleTouchMove(e) {
+    if (!isDraggings) return;
+    currentX = e.touches[0].clientX;
+    const deltaX = currentX - lastX;
+    lastX = currentX;
+    const carousel = document.querySelector('.kataloqCarusel');
+    const transformMatrix = new WebKitCSSMatrix(getComputedStyle(carousel).transform);
+    carousel.style.transform = `translateX(${transformMatrix.m41 + deltaX}px)`;
+    velocity = deltaX;
+}
+
+function handleTouchEnd() {
+    isDraggings = false;
+    inertiaScroll();
+}
+
+function handleMouseDown(e) {
+    startX = e.clientX;
+    isDraggings = true;
+    lastX = startX;
+    cancelAnimationFrame(animationFrame);
+    const carousel = document.querySelector('.kataloqCarusel');
+    carousel.style.transition = 'none';
+}
+
+function handleMouseMove(e) {
+    if (!isDraggings) return;
+    currentX = e.clientX;
+    const deltaX = currentX - lastX;
+    lastX = currentX;
+    const carousel = document.querySelector('.kataloqCarusel');
+    const transformMatrix = new WebKitCSSMatrix(getComputedStyle(carousel).transform);
+    carousel.style.transform = `translateX(${transformMatrix.m41 + deltaX}px)`;
+    velocity = deltaX;
+}
+
+function handleMouseUp() {
+    isDraggings = false;
+    inertiaScroll();
+}
+
+function inertiaScroll() {
+    const carousel = document.querySelector('.kataloqCarusel');
+    let transformMatrix = new WebKitCSSMatrix(getComputedStyle(carousel).transform);
+    let currentX = transformMatrix.m41;
+    const deceleration = 0.95;
+
+    function animate() {
+        velocity *= deceleration;
+        currentX += velocity;
+        carousel.style.transform = `translateX(${currentX}px)`;
+        if (Math.abs(velocity) > 0.5) {
+            animationFrame = requestAnimationFrame(animate);
+        } else {
+            snapToNearest();
+        }
+    }
+    animate();
+}
+
+function snapToNearest() {
+    const carousel = document.querySelector('.kataloqCarusel');
+    const items = document.querySelectorAll('.carousel-items');
+    const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight) * 2;
+    const transformMatrix = new WebKitCSSMatrix(getComputedStyle(carousel).transform);
+    let currentX = transformMatrix.m41;
+    Index = Math.round(-currentX / itemWidth);
+    const visibleItemsCount = Math.floor(document.querySelector('.kataloq').offsetWidth / itemWidth);
+    const maxIndex = items.length - visibleItemsCount;
+
+    if (Index < 0) {
+        Index = 0;
+    } else if (Index > maxIndex) {
+        Index = maxIndex;
+    }
+
+    carousel.style.transition = 'transform 0.5s ease-in-out';
+    carousel.style.transform = `translateX(-${Index * itemWidth}px)`;
+}
+
+const carouselElement = document.getElementById('carousel');
+carouselElement.addEventListener('touchstart', handleTouchStart);
+carouselElement.addEventListener('touchmove', handleTouchMove);
+carouselElement.addEventListener('touchend', handleTouchEnd);
+carouselElement.addEventListener('mousedown', handleMouseDown);
+carouselElement.addEventListener('mousemove', handleMouseMove);
+carouselElement.addEventListener('mouseup', handleMouseUp);
+carouselElement.addEventListener('mouseleave', handleMouseUp);
