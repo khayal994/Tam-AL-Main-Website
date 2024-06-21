@@ -345,13 +345,16 @@ body {
     }
     /* Responsive Styles */
 @media (max-width: 768px) {
+  .h2{
+    font-size: 20px;
+    margin-left: 10px;
+  }
   .product-prices{
     font-size: 13px;
   }
   .product-item{
     width: 152px;
   }
-  
   .product-item figure img{
     height: 80px;
     width: 80px;
