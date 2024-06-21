@@ -350,6 +350,20 @@ body {
     }
     /* Responsive Styles */
 @media (max-width: 768px) {
+  .pb{
+    text-align: center;
+  }
+  .widget-title{
+    text-align: center;
+  }
+  .photo{
+    width: 250px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: 30px;
+    left: 65px;
+  }
   .carousel-container{
     max-width: 350px;
   }
@@ -392,7 +406,7 @@ body {
       align-items: flex-start;
   }
   .search-bar {
-      width: 87%;
+      width: 83%;
       order: 2;
       margin-top: 10px;
   }
@@ -401,7 +415,7 @@ body {
   }
   .navbar-toggler{
     position: absolute;
-    left: 120px;
+    left: 130px;
     top: -75px;
   }
   .logo {
@@ -615,6 +629,7 @@ body {
   .block-3 { grid-area: 2 / 8 / 3 / 13; }
   
   @media screen and (max-width:1140px) {
+
     .banner-blocks {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
