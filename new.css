@@ -345,6 +345,10 @@ body {
     }
     /* Responsive Styles */
 @media (max-width: 768px) {
+  .carousel-container{
+    max-width: 388px;
+  }
+
   .h2{
     font-size: 20px;
     margin-left: 10px;
