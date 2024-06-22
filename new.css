@@ -405,7 +405,8 @@ body {
   }
  
   .product-item{
-    width: 160px;
+    width: 159px;
+
     background-color: #986b6b;
   }
   .product-item figure img{
