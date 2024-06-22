@@ -378,7 +378,7 @@ body {
     gap: -10px;
   }   */
   .img{
-    width: 160px;
+    width: 162px;
   }
   .pb{
     text-align: center;
@@ -405,9 +405,7 @@ body {
   }
  
   .product-item{
-    width: 160px;
-
-    background-color: #986b6b;
+    width: 162px;
   }
   .product-item figure img{
     height: 80px;
