@@ -25,17 +25,18 @@
 </head>
 <body>
   <section>
-    <div class="top-bar" id="top-bar">
-      <span class="delivery-icon"><i class="fas fa-truck-moving"></i></span>
-      <span class="animated-delivery">Çatdırılma Pulsuz 0₼</span>
+    <div class="top-bar" id="top-bar" style="background-color: white;">
+      <span class="delivery-icon" style="color: black;"><i class="fas fa-truck-moving"></i></span>
+      <span class="animated-delivery" style="color: black;">Çatdırılma Pulsuz 0₼</span>
       <div class="top-links sa">
-        <a href="#"><i class="fas fa-language"></i>Dil / Valyuta |</a>
-        <a href="#"><i class="fas fa-store"></i>TamAl'da Səndə Sat |</a>
-        <a href="#"><i class="fas fa-question-circle"></i>Yardım&Dəstək |</a>
-        <a href="#"><i class="fas fa-phone"></i>Bizimlə Əlaqə-055-744-8727</a>
+        <a href="#" style="color: black;"><i class="fas fa-language" style="color: black;"></i>Dil / Valyuta |</a>
+        <a href="#" style="color: black;"><i class="fas fa-store" style="color: black;"></i>TamAl'da Səndə Sat |</a>
+        <a href="#" style="color: black;"><i class="fas fa-question-circle" style="color: black;"></i>Yardım&Dəstək |</a>
+        <a href="#" style="color: black;"><i class="fas fa-phone" style="color: black;"></i>Bizimlə Əlaqə-055-744-8727</a>
       </div>
-      <span class="close-icon" id="close-icon">&times;</span>
+      <span class="close-icon" id="close-icon" style="color: black;">&times;</span>
     </div>
+   
   </section>
   <header>
     <div class="header-main">
@@ -47,10 +48,23 @@
             <button><span class="material-icons">search</span></button>
         </div>
         <div class="user-actions">
-            <a href="#"><span class="material-icons">person</span></a>
-            <a href="#"><span class="material-icons">favorite</span></a>
-            <a href="#"><span class="material-icons">shopping_cart</span></a>
+          <div class="cart-iconlar" >
+            <span id="cart-countlar">0</span>
         </div>
+        <a href="#"><span class="material-icons">person</span></a>
+        <ul class="nav-linksx">
+          <li class="favorites">
+              <a href="#" id="openFavorites">
+                  <span class="icon" style="color: black;">❤</span>
+                  <span class="count">0</span>
+              </a>
+          </li>
+      </ul>
+            
+             
+            <a href="#"><span class="material-icons cart-countlar" onclick="toggleCart()">shopping_cart</span></a>
+        </div>
+       
     </div>
 </header>
 <div class="container-fluid">
@@ -358,15 +372,15 @@
   
                     <div class="product-grid row   row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                     
-                      <div class="col">
-                        <div class="product-item">
+                      <div class="col product-cardlar" data-id="1" data-name="Məhsul 2" data-price="50" data-image="sekil 1.jpg">
+                        <div class="product-item ">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil1"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 1.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -386,22 +400,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
                       
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="2" data-name="Məhsul 2" data-price="50" data-image="sekil 2.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil2"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 2.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -421,21 +435,21 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="3" data-name="Məhsul 2" data-price="50" data-image="sekil 3.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil3"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 3.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -455,22 +469,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="4" data-name="Məhsul 2" data-price="50" data-image="sekil 4.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil4"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 4.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -490,22 +504,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="5" data-name="Məhsul 2" data-price="50" data-image="sekil 5.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil5"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 5.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -525,22 +539,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="6" data-name="Məhsul 2" data-price="50" data-image="sekil 6.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil6"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 6.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -560,22 +574,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="7" data-name="Məhsul 2" data-price="50" data-image="sekil 7.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil7"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 7.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -595,22 +609,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="8" data-name="Məhsul 2" data-price="50" data-image="sekil 8.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil8"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 8.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -630,22 +644,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="9" data-name="Məhsul 2" data-price="50" data-image="sekil 9.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil9"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 9.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -665,22 +679,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="10" data-name="Məhsul 2" data-price="50" data-image="sekil 10.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil10"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 10.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -700,22 +714,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="11" data-name="Məhsul 2" data-price="50" data-image="sekil 11.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil11"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 11.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -735,22 +749,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="12" data-name="Məhsul 2" data-price="50" data-image="sekil 12.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil12"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 12.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -770,14 +784,120 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
-  
+                      
+                      <div class="col product-cardlar" data-id="13" data-name="Məhsul 2" data-price="50" data-image="sekil 13.jpg">
+                        <div class="product-item">
+                          <span class="badge bg-success position-absolute m-3">-30%</span>
+                          <div class="img as sekil13"></div>
+                          <figure>
+                            <a href="single-product.html" title="Product Title">
+                              <img src="sekil 13.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              
+                              <div  class="heart-icon"></div>
+                            </a>
+                          </figure>
+                          <div class="product-prices">
+                            <span class="current-price">50 AZN</span>
+                            <span class="old-price">70 AZN</span>
+                        </div>
+                          <!-- <h3 class="product-name">Qara papaq</h3> -->
+                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
+                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
+                          <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">☆<span class="deyer"> 22</span></span>
+                            
+                        </div>
+                          <br>
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
+                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col product-cardlar" data-id="14" data-name="Məhsul 2" data-price="50" data-image="sekil 14.jpg">
+                        <div class="product-item">
+                          <span class="badge bg-success position-absolute m-3">-30%</span>
+                          <div class="img as sekil14"></div>
+                          <figure>
+                            <a href="single-product.html" title="Product Title">
+                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              
+                              <div  class="heart-icon"></div>
+                            </a>
+                          </figure>
+                          <div class="product-prices">
+                            <span class="current-price">50 AZN</span>
+                            <span class="old-price">70 AZN</span>
+                        </div>
+                          <!-- <h3 class="product-name">Qara papaq</h3> -->
+                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
+                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
+                          <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">☆<span class="deyer"> 22</span></span>
+                            
+                        </div>
+                          <br>
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
+                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col product-cardlar" data-id="15" data-name="Məhsul 2" data-price="50" data-image="sekil 15.jpg">
+                        <div class="product-item">
+                          <span class="badge bg-success position-absolute m-3">-30%</span>
+                          <div class="img as sekil15"></div>
+                          <figure>
+                            <a href="single-product.html" title="Product Title">
+                              <img src="sekil 15.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              
+                              <div  class="heart-icon"></div>
+                            </a>
+                          </figure>
+                          <div class="product-prices">
+                            <span class="current-price">50 AZN</span>
+                            <span class="old-price">70 AZN</span>
+                        </div>
+                          <!-- <h3 class="product-name">Qara papaq</h3> -->
+                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
+                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
+                          <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">☆<span class="deyer"> 22</span></span>
+                            
+                        </div>
+                          <br>
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
+                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+
+                     
                     <!-- / product-grid -->
                     
                   </div>
@@ -786,120 +906,15 @@
                     
                     <div class="product-grid row  row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
   
-                      <div class="col">
-                        <div class="product-item">
-                          <span class="badge bg-success position-absolute m-3">-30%</span>
-                          <div class="img as sekil13"></div>
-                          <figure>
-                            <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
-                              
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
-                            </a>
-                          </figure>
-                          <div class="product-prices">
-                            <span class="current-price">50 AZN</span>
-                            <span class="old-price">70 AZN</span>
-                        </div>
-                          <!-- <h3 class="product-name">Qara papaq</h3> -->
-                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
-                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
-                          <div class="product-rating">
-                            <span class="star">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">☆<span class="deyer"> 22</span></span>
-                            
-                        </div>
-                          <br>
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
-                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col">
-                        <div class="product-item">
-                          <span class="badge bg-success position-absolute m-3">-30%</span>
-                          <div class="img as sekil14"></div>
-                          <figure>
-                            <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
-                              
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
-                            </a>
-                          </figure>
-                          <div class="product-prices">
-                            <span class="current-price">50 AZN</span>
-                            <span class="old-price">70 AZN</span>
-                        </div>
-                          <!-- <h3 class="product-name">Qara papaq</h3> -->
-                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
-                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
-                          <div class="product-rating">
-                            <span class="star">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">☆<span class="deyer"> 22</span></span>
-                            
-                        </div>
-                          <br>
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
-                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col">
-                        <div class="product-item">
-                          <span class="badge bg-success position-absolute m-3">-30%</span>
-                          <div class="img as sekil15"></div>
-                          <figure>
-                            <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
-                              
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
-                            </a>
-                          </figure>
-                          <div class="product-prices">
-                            <span class="current-price">50 AZN</span>
-                            <span class="old-price">70 AZN</span>
-                        </div>
-                          <!-- <h3 class="product-name">Qara papaq</h3> -->
-                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
-                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
-                          <div class="product-rating">
-                            <span class="star">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">★</span>
-                            <span class="star ara">☆<span class="deyer"> 22</span></span>
-                            
-                        </div>
-                          <br>
-                          <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
-                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="16" data-name="Məhsul 2" data-price="50" data-image="sekil 16.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil16"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 16.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -919,22 +934,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="17" data-name="Məhsul 2" data-price="50" data-image="sekil 17.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil17"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 17.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -954,22 +969,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="18" data-name="Məhsul 2" data-price="50" data-image="sekil 18.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil18"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 18.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -989,22 +1004,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="19" data-name="Məhsul 2" data-price="50" data-image="sekil 19.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil19"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 19.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1024,22 +1039,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="20" data-name="Məhsul 2" data-price="50" data-image="sekil 20.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil20"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 20.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1059,22 +1074,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="21" data-name="Məhsul 2" data-price="50" data-image="sekil 21.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil21"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 21.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1094,20 +1109,20 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="22" data-name="Məhsul 2" data-price="50" data-image="sekil 22.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil22"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 22.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
                               <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
                             </a>
@@ -1129,22 +1144,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="23" data-name="Məhsul 2" data-price="50" data-image="sekil 23.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil23"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 23.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1164,22 +1179,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="24" data-name="Məhsul 2" data-price="50" data-image="sekil 24.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil24"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 24.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1199,22 +1214,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="25" data-name="Məhsul 2" data-price="50" data-image="sekil 25.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil25"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 25.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1234,22 +1249,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="26" data-name="Məhsul 2" data-price="50" data-image="sekil 26.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil26"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 26.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1269,22 +1284,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="27" data-name="Məhsul 2" data-price="50" data-image="sekil 27.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil27"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 27.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1304,22 +1319,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="28" data-name="Məhsul 2" data-price="50" data-image="sekil 28.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil28"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 28.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1339,22 +1354,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="29" data-name="Məhsul 2" data-price="50" data-image="sekil 29.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil29"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 29.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1374,22 +1389,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="30" data-name="Məhsul 2" data-price="50" data-image="sekil 30.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil30"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 30.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1409,22 +1424,22 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                      <div class="col product-cardlar" data-id="31" data-name="Məhsul 2" data-price="50" data-image="sekil 31.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil31"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 31.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1444,22 +1459,127 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <!-- <div class="col">
+                      <div class="col product-cardlar" data-id="32" data-name="Məhsul 2" data-price="50" data-image="sekil 32.jpg">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
-                          <div class="img as sekil1"></div>
+                          <div class="img as sekil32"></div>
                           <figure>
                             <a href="single-product.html" title="Product Title">
-                              <img src="sekil 14.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              <img src="sekil 32.jpg" alt="Product Thumbnail" class="tab-image sa">
                               
-                              <div style="color: black; background-color: rgb(255, 255, 255); border-radius: 50%; width: 20%; box-shadow: -1px 1px 7px 3px rgba(0, 0, 0, 0.176);" class="heart-icon"></div>
+                              <div  class="heart-icon"></div>
+                            </a>
+                          </figure>
+                          <div class="product-prices">
+                            <span class="current-price">50 AZN</span>
+                            <span class="old-price">70 AZN</span>
+                        </div>
+                          <!-- <h3 class="product-name">Qara papaq</h3> -->
+                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
+                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
+                          <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">☆<span class="deyer"> 22</span></span>
+                            
+                        </div>
+                          <br>
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
+                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col product-cardlar" data-id="33" data-name="Məhsul 2" data-price="50" data-image="sekil 33.jpg">
+                        <div class="product-item">
+                          <span class="badge bg-success position-absolute m-3">-30%</span>
+                          <div class="img as sekil33"></div>
+                          <figure>
+                            <a href="single-product.html" title="Product Title">
+                              <img src="sekil 33.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              
+                              <div  class="heart-icon"></div>
+                            </a>
+                          </figure>
+                          <div class="product-prices">
+                            <span class="current-price">50 AZN</span>
+                            <span class="old-price">70 AZN</span>
+                        </div>
+                          <!-- <h3 class="product-name">Qara papaq</h3> -->
+                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
+                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
+                          <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">☆<span class="deyer"> 22</span></span>
+                            
+                        </div>
+                          <br>
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
+                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col product-cardlar" data-id="34" data-name="Məhsul 2" data-price="50" data-image="sekil 34.jpg">
+                        <div class="product-item">
+                          <span class="badge bg-success position-absolute m-3">-30%</span>
+                          <div class="img as sekil34"></div>
+                          <figure>
+                            <a href="single-product.html" title="Product Title">
+                              <img src="sekil 34.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              
+                              <div class="heart-icon"></div>
+                            </a>
+                          </figure>
+                          <div class="product-prices">
+                            <span class="current-price">50 AZN</span>
+                            <span class="old-price">70 AZN</span>
+                        </div>
+                          <!-- <h3 class="product-name">Qara papaq</h3> -->
+                          <p class="product-description">Məhsul haqqında qısa məlumat.</p>
+                          <span class="animated-delivery animated as">Çatdırılma Pulsuz 0₼</span>
+                          <div class="product-rating">
+                            <span class="star">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">★</span>
+                            <span class="star ara">☆<span class="deyer"> 22</span></span>
+                            
+                        </div>
+                          <br>
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
+                              Səbətə Əlavə Et <span class="cart-icon">➔</span>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                       <div class="col product-cardlar" data-id="35" data-name="Məhsul 2" data-price="50" data-image="sekil 35.jpg">
+                        <div class="product-item">
+                          <span class="badge bg-success position-absolute m-3">-30%</span>
+                          <div class="img as sekil35"></div>
+                          <figure>
+                            <a href="single-product.html" title="Product Title">
+                              <img src="sekil 35.jpg" alt="Product Thumbnail" class="tab-image sa">
+                              
+                              <div  class="heart-icon"></div>
                             </a>
                           </figure>
                           <div class="product-prices">
@@ -1479,14 +1599,14 @@
                         </div>
                           <br>
                           <div class="d-flex align-items-center justify-content-between">
-                            <div class="add-to-cart" style="height: 6px; ">
+                            <div class="add-to-cart add-to-cartlar" style="height: 6px; ">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col">
+                   <!--   <div class="col">
                         <div class="product-item">
                           <span class="badge bg-success position-absolute m-3">-30%</span>
                           <div class="img as sekil1"></div>
@@ -1883,10 +2003,10 @@
           <div class="carousel-container">
             <!-- <button class="carousel-button prev" onclick="prevCard()">❮</button> -->
             <div class="carousel-wrapper">
-                <div class="product-card">
+                <div class="product-card product-cardlar product-cardx" data-namex="Məhsul 65" data-pricex="$49.99" data-imagex="sekil 36.jpg" data-id="36" data-name="Məhsul 2" data-price="50" data-image="sekil 36.jpg">
                     <div class="image-container">
-                        <img src="sekil 1.jpg" alt="Məhsulun Şəkli" class="product-image">
-                        <div class="heart-icon"></div>
+                        <img src="sekil 36.jpg" alt="Məhsulun Şəkli" class="product-image">
+                        <div class="heart-icon like-iconx"></div>
                         <div class="product-prices">
                             <span class="current-price">50 AZN</span>
                             <span class="old-price">70 AZN</span>
@@ -1902,15 +2022,15 @@
                             <span class="star">★</span>
                             <span class="star">☆</span>
                         </div>
-                        <div class="add-to-cart">
+                        <div class="add-to-cart add-to-cartlar">
                             Səbətə Əlavə Et <span class="cart-icon">➔</span>
                         </div>
                     </div>
                 </div>
                 <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="37" data-name="Məhsul 2" data-price="50" data-image="sekil 37.jpg">
                     <div class="image-container">
-                        <img src="sekil 2.jpg" alt="Məhsulun Şəkli" class="product-image">
+                        <img src="sekil 37.jpg" alt="Məhsulun Şəkli" class="product-image">
                         <div class="heart-icon"></div>
                         <div class="product-prices">
                             <span class="current-price">50 AZN</span>
@@ -1927,15 +2047,15 @@
                             <span class="star">★</span>
                             <span class="star">☆</span>
                         </div>
-                        <div class="add-to-cart">
+                        <div class="add-to-cart add-to-cartlar">
                             Səbətə Əlavə Et <span class="cart-icon">➔</span>
                         </div>
                     </div>
                 </div>
                 <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="38" data-name="Məhsul 2" data-price="50" data-image="sekil 38.jpg">
                     <div class="image-container">
-                        <img src="sekil 5.jpg" alt="Məhsulun Şəkli" class="product-image">
+                        <img src="sekil 38.jpg" alt="Məhsulun Şəkli" class="product-image">
                         <div class="heart-icon"></div>
                         <div class="product-prices">
                             <span class="current-price">50 AZN</span>
@@ -1952,15 +2072,15 @@
                             <span class="star">★</span>
                             <span class="star">☆</span>
                         </div>
-                        <div class="add-to-cart">
+                        <div class="add-to-cart add-to-cartlar">
                             Səbətə Əlavə Et <span class="cart-icon">➔</span>
                         </div>
                     </div>
                 </div>
                 <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="39" data-name="Məhsul 2" data-price="50" data-image="sekil 39.jpg">
                     <div class="image-container">
-                        <img src="sekil 6.jpg" alt="Məhsulun Şəkli" class="product-image">
+                        <img src="sekil 39.jpg" alt="Məhsulun Şəkli" class="product-image">
                         <div class="heart-icon"></div>
                         <div class="product-prices">
                             <span class="current-price">50 AZN</span>
@@ -1977,15 +2097,15 @@
                             <span class="star">★</span>
                             <span class="star">☆</span>
                         </div>
-                        <div class="add-to-cart">
+                        <div class="add-to-cart add-to-cartlar">
                             Səbətə Əlavə Et <span class="cart-icon">➔</span>
                         </div>
                     </div>
                 </div>
                 <!-- Divin Gotu -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="40" data-name="Məhsul 2" data-price="50" data-image="sekil 40.jpg">
                     <div class="image-container">
-                        <img src="sekil 17.jpg" alt="Məhsulun Şəkli" class="product-image">
+                        <img src="sekil 40.jpg" alt="Məhsulun Şəkli" class="product-image">
                         <div class="heart-icon"></div>
                         <div class="product-prices">
                             <span class="current-price">50 AZN</span>
@@ -2002,16 +2122,16 @@
                             <span class="star">★</span>
                             <span class="star">☆</span>
                         </div>
-                        <div class="add-to-cart">
+                        <div class="add-to-cart add-to-cartlar">
                             Səbətə Əlavə Et <span class="cart-icon">➔</span>
                         </div>
                     </div>
                 </div>
                 <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="41" data-name="Məhsul 2" data-price="50" data-image="sekil 41.jpg">
 
                     <div class="image-container">
-                        <img src="sekil 16.jpg" alt="Məhsulun Şəkli" class="product-image imh">
+                        <img src="sekil 41.jpg" alt="Məhsulun Şəkli" class="product-image imh">
                         <div class="heart-icon"></div>
                         <div class="product-prices">
                             <span class="current-price">50 AZN</span>
@@ -2028,15 +2148,15 @@
                             <span class="star">★</span>
                             <span class="star">☆</span>
                         </div>
-                        <div class="add-to-cart">
+                        <div class="add-to-cart add-to-cartlar">
                             Səbətə Əlavə Et <span class="cart-icon">➔</span>
                         </div>
                     </div>
                 </div>
                       <!-- Divin Agzi -->
-                      <div class="product-card">
+                      <div class="product-card product-cardlar" data-id="42" data-name="Məhsul 2" data-price="50" data-image="sekil 42.jpg">
                         <div class="image-container">
-                            <img src="sekil 10.jpg" alt="Məhsulun Şəkli" class="product-image">
+                            <img src="sekil 42.jpg" alt="Məhsulun Şəkli" class="product-image">
                             <div class="heart-icon"></div>
                             <div class="product-prices">
                                 <span class="current-price">50 AZN</span>
@@ -2053,15 +2173,15 @@
                                 <span class="star">★</span>
                                 <span class="star">☆</span>
                             </div>
-                            <div class="add-to-cart">
+                            <div class="add-to-cart add-to-cartlar">
                                 Səbətə Əlavə Et <span class="cart-icon">➔</span>
                             </div>
                         </div>
                     </div>
                           <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="43" data-name="Məhsul 2" data-price="50" data-image="sekil 43.jpg">
                   <div class="image-container">
-                      <img src="sekil 11.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 43.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2078,15 +2198,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="44" data-name="Məhsul 2" data-price="50" data-image="sekil 44.jpg">
                       <div class="image-container">
-                          <img src="sekil 12.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 44.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2103,15 +2223,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="45" data-name="Məhsul 2" data-price="50" data-image="sekil 45.jpg">
                   <div class="image-container">
-                      <img src="sekil 13.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 45.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2128,15 +2248,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="46" data-name="Məhsul 2" data-price="50" data-image="sekil 46.jpg">
                       <div class="image-container">
-                          <img src="sekil 14.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 46.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2153,15 +2273,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="47" data-name="Məhsul 2" data-price="50" data-image="sekil 47.jpg">
                   <div class="image-container">
-                      <img src="sekil 15.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 47.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2178,15 +2298,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="48" data-name="Məhsul 2" data-price="50" data-image="sekil 48.jpg">
                       <div class="image-container">
-                          <img src="sekil 16.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 48.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2203,15 +2323,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="49" data-name="Məhsul 2" data-price="50" data-image="sekil 49.jpg">
                   <div class="image-container">
-                      <img src="sekil 17.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 49.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2228,15 +2348,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="50" data-name="Məhsul 2" data-price="50" data-image="sekil 50.jpg">
                       <div class="image-container">
-                          <img src="sekil 18.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 50.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2253,15 +2373,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="51" data-name="Məhsul 2" data-price="50" data-image="sekil 51.jpg">
                   <div class="image-container">
-                      <img src="sekil 19.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 51.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2278,15 +2398,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="52" data-name="Məhsul 2" data-price="50" data-image="sekil 52.jpg">
                       <div class="image-container">
-                          <img src="sekil 20.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 52.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2303,15 +2423,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="53" data-name="Məhsul 2" data-price="50" data-image="sekil 53.jpg">
                   <div class="image-container">
-                      <img src="sekil 9.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 53.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2328,15 +2448,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="54" data-name="Məhsul 2" data-price="50" data-image="sekil 54.jpg">
                       <div class="image-container">
-                          <img src="sekil 8.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 54.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2353,15 +2473,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="55" data-name="Məhsul 2" data-price="50" data-image="sekil 55.jpg">
                   <div class="image-container">
-                      <img src="sekil 7.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 55.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2378,15 +2498,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="56" data-name="Məhsul 2" data-price="50" data-image="sekil 56.jpg">
                       <div class="image-container">
-                          <img src="sekil 6.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 56.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2403,15 +2523,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="57" data-name="Məhsul 2" data-price="50" data-image="sekil 57.jpg">
                   <div class="image-container">
-                      <img src="sekil 7.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 57.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2428,15 +2548,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="58" data-name="Məhsul 2" data-price="50" data-image="sekil 58.jpg">
                       <div class="image-container">
-                          <img src="sekil 8.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 58.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2453,15 +2573,15 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
                   </div>
                         <!-- Divin Agzi -->
-                <div class="product-card">
+                <div class="product-card product-cardlar" data-id="59" data-name="Məhsul 2" data-price="50" data-image="sekil 59.jpg">
                   <div class="image-container">
-                      <img src="sekil 9.jpg" alt="Məhsulun Şəkli" class="product-image">
+                      <img src="sekil 59.jpg" alt="Məhsulun Şəkli" class="product-image">
                       <div class="heart-icon"></div>
                       <div class="product-prices">
                           <span class="current-price">50 AZN</span>
@@ -2478,15 +2598,15 @@
                           <span class="star">★</span>
                           <span class="star">☆</span>
                       </div>
-                      <div class="add-to-cart">
+                      <div class="add-to-cart add-to-cartlar">
                           Səbətə Əlavə Et <span class="cart-icon">➔</span>
                       </div>
                   </div>
               </div>
                     <!-- Divin Agzi -->
-                    <div class="product-card">
+                    <div class="product-card product-cardlar" data-id="60" data-name="Məhsul 2" data-price="50" data-image="sekil 60.jpg">
                       <div class="image-container">
-                          <img src="sekil 10.jpg" alt="Məhsulun Şəkli" class="product-image">
+                          <img src="sekil 60.jpg" alt="Məhsulun Şəkli" class="product-image">
                           <div class="heart-icon"></div>
                           <div class="product-prices">
                               <span class="current-price">50 AZN</span>
@@ -2503,7 +2623,7 @@
                               <span class="star">★</span>
                               <span class="star">☆</span>
                           </div>
-                          <div class="add-to-cart">
+                          <div class="add-to-cart add-to-cartlar">
                               Səbətə Əlavə Et <span class="cart-icon">➔</span>
                           </div>
                       </div>
@@ -2856,6 +2976,72 @@
         </div>
       </footer>
     <br><br><br>
+
+
+
+
+  <div class="cart-sidebarlar" id="cart-sidebarlar">
+      <div class="cart-headerlar">
+          <h2>Səbət</h2>
+          <span class="close-btnlar" onclick="toggleCart()">✖</span>
+      </div>
+      <div class="cart-itemslar">
+          <!-- Səbətə əlavə olunan məhsullar buraya gələcək -->
+      </div>
+      <div class="cart-footerlar">
+          <p>Ümumi: <span id="total-pricelar">0</span> AZN</p>
+          <button class="checkout-btnlar">Alış-verişi tamamla</button>
+      </div>
+  </div>
+
+
+<div class="notification" id="notification">
+    <span class="notification-icon">✔</span>
+    <span class="notification-message">Məhsul favorilərə əlavə edildi</span>
+</div>
+
+<div class="product-containerx">
+    <div class="product-cardx" data-namex="Məhsul 1" data-pricex="$49.99" data-imagex="sekil 11.jpg">
+        <div class="product-imagex">
+            <img src="sekil 11.jpg" alt="Məhsul 1">
+            <span class="like-iconx"></span>
+        </div>
+        <div class="product-infox">
+            <p class="product-pricex">$49.99</p>
+            <p class="product-namex">Məhsul 1</p>
+        </div>
+    </div>
+    <div class="product-cardx" data-namex="Məhsul 2" data-pricex="$59.99" data-imagex="sekil 11.jpg">
+        <div class="product-imagex">
+            <img src="sekil 11.jpg" alt="Məhsul 2">
+            <span class="like-iconx"></span>
+        </div>
+        <div class="product-infox">
+            <p class="product-pricex">$59.99</p>
+            <p class="product-namex">Məhsul 2</p>
+        </div>
+    </div>
+    <div class="product-cardx" data-namex="Məhsul 3" data-pricex="$49.99" data-imagex="sekil 11.jpg">
+        <div class="product-imagex">
+            <img src="sekil 11.jpg" alt="Məhsul 3">
+            <span class="like-iconx"></span>
+        </div>
+        <div class="product-infox">
+            <p class="product-pricex">$49.99</p>
+            <p class="product-namex">Məhsul 3</p>
+        </div>
+    </div>
+</div>
+
+<div class="favorites-pagex" id="favoritesPagex">
+    <div class="favorites-contentx">
+        <span class="closex" id="closeFavorites">&times;</span>
+        <h2>Favorilər</h2>
+        <div id="favoritesList">
+            <!-- Favorit məhsullar burada göstəriləcək -->
+        </div>
+    </div>
+</div>
       <script src="js/jquery-1.11.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
